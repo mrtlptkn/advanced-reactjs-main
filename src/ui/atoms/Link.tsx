@@ -20,6 +20,7 @@ export const Link: React.FC<LinkProps> = ({
 }) => {
 	return (
 		<a
+		    style={{ textDecoration: 'none' }} // linkin altını çizmemesi için
 			href={href}
 			target={target}
 			rel={rel}

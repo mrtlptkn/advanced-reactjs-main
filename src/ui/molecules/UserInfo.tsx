@@ -1,6 +1,8 @@
 import React from 'react';
 import { ProfileCircle, Typography, Icon } from '../atoms';
 
+// Moleküller  atomlardan oluşabilir. 
+
 interface UserInfoProps {
 	userName: string;
 	date: string;

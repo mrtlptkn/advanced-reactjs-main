@@ -5,6 +5,8 @@ import {
 } from '../../context/cart/cart.context';
 import CartSummary from './components/cart.summary';
 
+// Pageler props almazlar, sadece diğer componentleri render ederler. Componentler ise props alır ve render ederler.
+
 function CartSummaryPage() {
 	// yaptığımız şey context içindeki state ve methodlara erişmek. ve güncel state i kullanmak.
 	const { cart, clearCart, removeItem } = useContext(

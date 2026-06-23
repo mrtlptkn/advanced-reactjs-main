@@ -13,6 +13,8 @@ interface SidebarProps {
 function Sidebar({ mobileOpen, onClose }: SidebarProps) {
 	return (
 		<>
+		{/* web versiyonu */}
+
 			<Drawer
 				variant="permanent"
 				sx={{
@@ -30,6 +32,7 @@ function Sidebar({ mobileOpen, onClose }: SidebarProps) {
 				<SidebarContent />
 			</Drawer>
 
+{/* sadece mobilde görünen kısımı */}
 			<Drawer
 				variant="temporary"
 				open={mobileOpen}
