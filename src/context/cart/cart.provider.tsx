@@ -18,6 +18,9 @@ type CartAction =
 	| { type: 'CLEAR_CART' };
 
 function cartReducer(state: CartState, action: CartAction): CartState {
+
+	console.log('cartReducer: action', action);
+
 	switch (action.type) {
 		case 'ADD_ITEM': {
 			const { productId, price, quantity } = action.payload;
