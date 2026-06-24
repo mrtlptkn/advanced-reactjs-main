@@ -1,6 +1,7 @@
 import React from 'react';
 import type { RouteObject } from 'react-router';
 import { getPostAsync } from '../client/post.client';
+import ProtectedRoute from './protected.route';
 
 // Nested Route ve Nested Layout Örneği
 // Ana layout altında farklı sayfalar ve alt layoutlar tanımlanabilir
@@ -9,6 +10,7 @@ const mainRoutes: RouteObject = {
 	path: '',
 	Component: React.lazy(() => import('../layout/main.layout')),
 	children: [
+		
 		{
 			index: true,
 			Component: React.lazy(() => import('../pages/index/home.page')),
@@ -99,6 +101,10 @@ const mainRoutes: RouteObject = {
 				},
 			],
 		},
+		{
+			path: 'protected',
+			element: <ProtectedRoute><div>deneme</div></ProtectedRoute>,
+		}
 	],
 };
 

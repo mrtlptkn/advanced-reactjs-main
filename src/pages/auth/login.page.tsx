@@ -9,8 +9,13 @@ interface LocationState {
 function LoginPage() {
 	const [username, setUsername] = useState('');
 	const { login } = useContext(AuthContext) as AuthContextType;
+
+	// herhangi bir kod bloğu çalışnaca yöneldnrime yapmak için. React router'da useNavigate() hook'u ile navigate fonksiyonu alıyoruz. navigate('/path') ile yönlendirme yapabiliriz.
 	const navigate = useNavigate();
+
+	// react router -> tarayıca o anki path lokasyonu verir. useLocation() ile o anki path'i alıyoruz.
 	const location = useLocation();
+	console.log('LoginPage location:', location);
 
 	// ProtectedRoute, kullanıcıyı buraya yönlendirirken gitmek istediği sayfayı location.state.from olarak iletmişti.
 	// Giriş başarılı olunca kullanıcıyı tekrar oraya gönderiyoruz.

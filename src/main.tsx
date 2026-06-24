@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import './index.css';
-import mainRoutes from './routes/main.routes.ts';
+import mainRoutes from './routes/main.routes.tsx';
 import CartProvider from './context/cart/cart.provider.tsx';
 import AuthProvider from './context/auth/auth.provider.tsx';
 import { Provider } from 'react-redux';
